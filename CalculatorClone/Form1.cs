@@ -29,12 +29,12 @@ namespace CalculatorClone
         }
 
 
-        private void button10_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             lblScreen.Text = "0";
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnPlus_Click(object sender, EventArgs e)
         {
             operation = '+';
             storedValue = decimal.Parse(lblScreen.Text);
@@ -67,10 +67,12 @@ namespace CalculatorClone
         {
             //operate the stored value against the value in the screen
             decimal secondValue = decimal.Parse(lblScreen.Text);
-            decimal result=0;
-            if (operation == '+') {
+            decimal result = 0;
+            if (operation == '+')
+            {
                 result = storedValue + secondValue;
-            }else if(operation == '-')
+            }
+            else if (operation == '-')
             {
                 result = storedValue - secondValue;
             }
@@ -88,6 +90,23 @@ namespace CalculatorClone
 
             //set the screen to clear on next digit being entered.
             clearNext = true;
+        }
+
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            if (clearNext == false)
+            {
+                //check there isn't already a decimal point
+                if (!lblScreen.Text.Contains("."))
+                {
+                    lblScreen.Text = lblScreen.Text + ".";
+                }
+            }
+            else
+            {
+                lblScreen.Text = "0.";
+                clearNext = false;
+            }
         }
     }
 }

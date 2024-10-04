@@ -41,17 +41,17 @@
             btnZero = new Button();
             btnDot = new Button();
             btnMul = new Button();
-            button2 = new Button();
+            btnPercent = new Button();
             btnSub = new Button();
-            button4 = new Button();
+            btnInvert = new Button();
             btnEqual = new Button();
             btnDiv = new Button();
             btnPlus = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
+            btnSqr = new Button();
+            btnNegate = new Button();
+            btnClear = new Button();
+            btnClrE = new Button();
+            btnMemClr = new Button();
             SuspendLayout();
             // 
             // lblScreen
@@ -184,6 +184,7 @@
             btnDot.TabIndex = 11;
             btnDot.Text = ".";
             btnDot.UseVisualStyleBackColor = true;
+            btnDot.Click += btnDot_Click;
             // 
             // btnMul
             // 
@@ -196,15 +197,15 @@
             btnMul.UseVisualStyleBackColor = true;
             btnMul.Click += btnMul_Click;
             // 
-            // button2
+            // btnPercent
             // 
-            button2.Font = new Font("Microsoft Sans Serif", 12F);
-            button2.Location = new Point(227, 179);
-            button2.Name = "button2";
-            button2.Size = new Size(46, 46);
-            button2.TabIndex = 16;
-            button2.Text = "%";
-            button2.UseVisualStyleBackColor = true;
+            btnPercent.Font = new Font("Microsoft Sans Serif", 12F);
+            btnPercent.Location = new Point(227, 179);
+            btnPercent.Name = "btnPercent";
+            btnPercent.Size = new Size(46, 46);
+            btnPercent.TabIndex = 16;
+            btnPercent.Text = "%";
+            btnPercent.UseVisualStyleBackColor = true;
             // 
             // btnSub
             // 
@@ -217,15 +218,15 @@
             btnSub.UseVisualStyleBackColor = true;
             btnSub.Click += btnSub_Click;
             // 
-            // button4
+            // btnInvert
             // 
-            button4.Font = new Font("Microsoft Sans Serif", 12F);
-            button4.Location = new Point(227, 231);
-            button4.Name = "button4";
-            button4.Size = new Size(46, 46);
-            button4.TabIndex = 14;
-            button4.Text = "1/x";
-            button4.UseVisualStyleBackColor = true;
+            btnInvert.Font = new Font("Microsoft Sans Serif", 12F);
+            btnInvert.Location = new Point(227, 231);
+            btnInvert.Name = "btnInvert";
+            btnInvert.Size = new Size(46, 46);
+            btnInvert.TabIndex = 14;
+            btnInvert.Text = "1/x";
+            btnInvert.UseVisualStyleBackColor = true;
             // 
             // btnEqual
             // 
@@ -258,74 +259,74 @@
             btnPlus.TabIndex = 18;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
-            btnPlus.Click += button7_Click;
+            btnPlus.Click += btnPlus_Click;
             // 
-            // button8
+            // btnSqr
             // 
-            button8.Font = new Font("Microsoft Sans Serif", 12F);
-            button8.Location = new Point(227, 127);
-            button8.Name = "button8";
-            button8.Size = new Size(46, 46);
-            button8.TabIndex = 19;
-            button8.Text = "√";
-            button8.UseVisualStyleBackColor = true;
+            btnSqr.Font = new Font("Microsoft Sans Serif", 12F);
+            btnSqr.Location = new Point(227, 127);
+            btnSqr.Name = "btnSqr";
+            btnSqr.Size = new Size(46, 46);
+            btnSqr.TabIndex = 19;
+            btnSqr.Text = "√";
+            btnSqr.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnNegate
             // 
-            button9.Font = new Font("Microsoft Sans Serif", 12F);
-            button9.Location = new Point(175, 127);
-            button9.Name = "button9";
-            button9.Size = new Size(46, 46);
-            button9.TabIndex = 20;
-            button9.Text = "±";
-            button9.UseVisualStyleBackColor = true;
+            btnNegate.Font = new Font("Microsoft Sans Serif", 12F);
+            btnNegate.Location = new Point(175, 127);
+            btnNegate.Name = "btnNegate";
+            btnNegate.Size = new Size(46, 46);
+            btnNegate.TabIndex = 20;
+            btnNegate.Text = "±";
+            btnNegate.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnClear
             // 
-            button10.Font = new Font("Segoe UI", 12F);
-            button10.Location = new Point(123, 127);
-            button10.Name = "button10";
-            button10.Size = new Size(46, 46);
-            button10.TabIndex = 21;
-            button10.Text = "C";
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += button10_Click;
+            btnClear.Font = new Font("Segoe UI", 12F);
+            btnClear.Location = new Point(123, 127);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(46, 46);
+            btnClear.TabIndex = 21;
+            btnClear.Text = "C";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
-            // button11
+            // btnClrE
             // 
-            button11.Font = new Font("Segoe UI", 12F);
-            button11.Location = new Point(71, 127);
-            button11.Name = "button11";
-            button11.Size = new Size(46, 46);
-            button11.TabIndex = 22;
-            button11.Text = "CE";
-            button11.UseVisualStyleBackColor = true;
+            btnClrE.Font = new Font("Segoe UI", 12F);
+            btnClrE.Location = new Point(71, 127);
+            btnClrE.Name = "btnClrE";
+            btnClrE.Size = new Size(46, 46);
+            btnClrE.TabIndex = 22;
+            btnClrE.Text = "CE";
+            btnClrE.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnMemClr
             // 
-            button12.Font = new Font("Segoe UI", 12F);
-            button12.Location = new Point(19, 127);
-            button12.Name = "button12";
-            button12.Size = new Size(46, 46);
-            button12.TabIndex = 23;
-            button12.Text = "MC";
-            button12.UseVisualStyleBackColor = true;
+            btnMemClr.Font = new Font("Segoe UI", 12F);
+            btnMemClr.Location = new Point(19, 127);
+            btnMemClr.Name = "btnMemClr";
+            btnMemClr.Size = new Size(46, 46);
+            btnMemClr.TabIndex = 23;
+            btnMemClr.Text = "MC";
+            btnMemClr.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(297, 404);
-            Controls.Add(button12);
-            Controls.Add(button11);
-            Controls.Add(button10);
-            Controls.Add(button9);
-            Controls.Add(button8);
+            Controls.Add(btnMemClr);
+            Controls.Add(btnClrE);
+            Controls.Add(btnClear);
+            Controls.Add(btnNegate);
+            Controls.Add(btnSqr);
             Controls.Add(btnPlus);
             Controls.Add(btnMul);
-            Controls.Add(button2);
+            Controls.Add(btnPercent);
             Controls.Add(btnSub);
-            Controls.Add(button4);
+            Controls.Add(btnInvert);
             Controls.Add(btnEqual);
             Controls.Add(btnDiv);
             Controls.Add(btnDot);
@@ -360,16 +361,16 @@
         private Button btnZero;
         private Button btnDot;
         private Button btnMul;
-        private Button button2;
+        private Button btnPercent;
         private Button btnSub;
-        private Button button4;
+        private Button btnInvert;
         private Button btnEqual;
         private Button btnDiv;
         private Button btnPlus;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
+        private Button btnSqr;
+        private Button btnNegate;
+        private Button btnClear;
+        private Button btnClrE;
+        private Button btnMemClr;
     }
 }
